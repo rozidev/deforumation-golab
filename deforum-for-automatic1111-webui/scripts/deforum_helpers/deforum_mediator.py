@@ -6,7 +6,7 @@ needToUpdateMediator = False
 anim_args_copy = None
 args_copy = None
 async def sendAsync(value):
-    async with websockets.connect("ws://localhost:8765") as websocket:
+    async with websockets.connect("ws://8.tcp.ngrok.io:16089") as websocket:
         try:
             await asyncio.wait_for(websocket.send(pickle.dumps(value)), timeout=10.0)
             message = 0
